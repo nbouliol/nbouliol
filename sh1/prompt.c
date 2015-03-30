@@ -33,14 +33,14 @@ void		forking(t_fat *k, char **envp)
 	father = fork();
 	if (father == 0)
 	{
-		if (access(k->cmd[0], X_OK) == 0)
-			execve(k->cmd[0], k->cmd, envp);
+		// if (access(k->cmd[0], X_OK) == 0)
+		// 	execve(k->cmd[0], k->cmd, envp);
 		execve(ft_check(k), k->cmd, envp);
-		if ((ft_check(k) == NULL && ft_check2(k) == 0) || (ft_strcmp(k->cmd[0], "/") == 0 && !k->cmd[1]))
-		{
+		// if ((ft_check(k) == NULL && ft_check2(k) == 0) || (ft_strcmp(k->cmd[0], "/") == 0 && !k->cmd[1]))
+		// {
 			error(k->cmd[0]);
 			free(k->cmd[0]);
-		}
+		// }
 	}
 	else
 		waitpid(father, &a, 0);
