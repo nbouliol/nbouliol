@@ -39,7 +39,7 @@ char		*ft_check(t_fat *k)
 
 int			ft_mini_check(t_fat *k)
 {
-	if (ft_strcmp(k->cmd[0], "exit") == 0 && k->cmd[0])
+	if ((ft_strcmp(k->cmd[0], "exit") == 0 || ft_strcmp(k->cmd[0], "quit") == 0) && k->cmd[0])
 	{
 		if (!k->cmd[1])
 			exit(0);
