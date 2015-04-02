@@ -31,14 +31,14 @@ void		tri(char *str, char *ret)
 	j = 0;
 	while (str[i])
 	{
-		if ((str[i] == ' ' && !str[i - 1]) || (str[i] == '	' && !str[i - 1]))
+		if ((str[i] == ' ' && !str[i - 1]) || (str[i] == '\t' && !str[i - 1]))
 			i = i + cnt(str);
 		if ((str[i] == ' ' && str[i + 1] == ' ') ||
-			(str[i] == ' ' && str[i + 1] == '	') ||
+			(str[i] == ' ' && str[i + 1] == '\t') ||
 			(str[i] == ' ' && !str[i - 1]) ||
-			(str[i] == '	' && str[i + 1] == '	') ||
-			(str[i] == '	' && str[i + 1] == ' ') ||
-			(str[i] == '	' && !str[i - 1]))
+			(str[i] == '\t' && str[i + 1] == '\t') ||
+			(str[i] == '\t' && str[i + 1] == ' ') ||
+			(str[i] == '\t' && !str[i - 1]))
 		{
 			i++;
 			continue ;
@@ -66,5 +66,12 @@ char		*epur_str(char *str)
 	while (ret[i])
 		str[j++] = ret[i++];
 	str[j] = 0;
+	i = 0;
+	while (str[i] != 0)
+	{
+		if (str[i] == '\t')
+			str[i] = ' ';
+		i++;
+	}
 	return (str);
 }

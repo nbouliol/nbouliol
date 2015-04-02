@@ -67,10 +67,10 @@ int			ft_lect(t_fat *k, char **envp)
 			}
 			else if (check_ret == 0 && ft_check(k) == 0)
 				error(k->cmd[0]);
-			free(k->cmd[0]);
+			free(line);
+			free(k->cmd);
 		}
 		dick();
-		free(line);
-	}
+		}
 	return (0);
 }

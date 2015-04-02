@@ -89,4 +89,5 @@ void		error(char *str)
 	ft_putstr_fd("\033[0;93mft_minishell1: command not found: \033[0m", 2);
 	ft_putstr_fd(str, 2);
 	ft_putchar_fd('\n', 2);
+	free(str);
 }
