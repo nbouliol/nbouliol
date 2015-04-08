@@ -12,10 +12,20 @@
 
 #include "sh1.h"
 
-void		dick(void)
+
+
+
+void		dick()
 {
-	ft_putstr("\033[0;40;32m&> \033[0m");
-	ft_putstr("\033[0;31m 3=o \033[0m");
+	char *tmp;
+
+	tmp = ft_memalloc(MAXPATHLEN);
+	tmp = getcwd(tmp, MAXPATHLEN);
+	tmp = ft_strrchr(tmp, '/');
+	tmp++;
+	ft_putstr("\033[0;36mpwd &>  \033[0m");
+	ft_putstr(tmp);
+	ft_putstr(" \033[0;31m 3=o \033[0m");
 }
 
 void		handle_signal(int signo)

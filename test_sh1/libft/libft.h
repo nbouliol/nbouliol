@@ -92,5 +92,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_swap(int *a, int *b);
 int					get_next_line(int const fd, char **line);
 char				*epur_str(char *str);
+void				ft_free_tab(char **tab);
 
 #endif
