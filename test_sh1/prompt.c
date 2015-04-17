@@ -6,16 +6,13 @@
 /*   By: nbouliol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/24 17:09:32 by nbouliol          #+#    #+#             */
-/*   Updated: 2015/03/24 17:09:42 by nbouliol         ###   ########.fr       */
+/*   Updated: 2015/04/17 15:20:22 by nbouliol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sh1.h"
 
-
-
-
-void		dick()
+void		dick(void)
 {
 	char *tmp;
 

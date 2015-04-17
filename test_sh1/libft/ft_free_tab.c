@@ -6,7 +6,7 @@
 /*   By: nbouliol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/07 16:11:34 by nbouliol          #+#    #+#             */
-/*   Updated: 2015/04/07 16:11:46 by nbouliol         ###   ########.fr       */
+/*   Updated: 2015/04/17 15:19:41 by nbouliol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_free_tab(char **tab)
 {
-	unsigned int    i;
+	unsigned int	i;
 
 	i = 0;
 	if (tab)
@@ -28,4 +28,3 @@ void	ft_free_tab(char **tab)
 		tab = 0;
 	}
 }
-
